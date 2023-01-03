@@ -19,16 +19,10 @@
     flex-direction: column;
     gap: 2px
 }
-.head:hover{
-    outline-style: solid;
-    cursor: pointer;
-}
-.body:hover{
-    outline-style: solid;
-    cursor: pointer;
-}
-.legs:hover{
-    outline-style: solid;
+.part:hover{
+    outline-style: solid !important;
+    outline-color: black !important;
+    opacity: 1 !important;
     cursor: pointer;
 }
 </style>
@@ -39,9 +33,11 @@
 
 <div class= "container">
     <div class = "figure">
-        <img class ="head" id= "head" src="head.png" alt="" onclick="selectBodyPart('head')">
-        <img class="body" id = "body" src="body.png" alt="" onclick="selectBodyPart('body')">
-        <img class= "legs" id = "legs" src="legs.png" alt="" onclick="selectBodyPart('legs')">
+        <img class ="part" id= "head" src="head.png" alt="Head" onclick="selectBodyPart('head')">
+        <img class= "part" id = "body" src="body.png" alt="Body" onclick="selectBodyPart('body')">
+        <img class= "part" id = "legs" src="legs.png" alt="Legs" onclick="selectBodyPart('legs')">
+    </div>
+    <div class="detail">
     </div>
 </div>
 

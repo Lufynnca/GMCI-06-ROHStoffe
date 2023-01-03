@@ -30,8 +30,8 @@ bind_address = 0.0.0.0
 origins = *
 */
 
-var loginname = 'admin1'
-var loginpass = 'GMCIprj'
+var loginname = 'admin'
+var loginpass = 'admin'
 
 var request = new XMLHttpRequest();
 
@@ -56,18 +56,39 @@ function get(variable) {
     request.send();
 }
 
-function update() {
+/*function update() {
     for (var name in handlers) {
         // console.log("updating " + name);
         get(name);
     }
-}
+}*/
 
 // request updates at a fixed interval (ms)
 var intervalID = setInterval(update, 1000);
 
 ///////////////////////////////////////////////////////////////////////////////
 // your code below
+function selectBodyPart(part){
+    var allowed = ["head", "body", "legs"]
+    //reset
+    allowed.forEach(function(elem){
+        document.getElementById(elem).style.outlineStyle = "none";
+        document.getElementById(elem).style.opacity = "1";
+
+    })
+    if(allowed.includes(part)){
+         //set
+         console.log()
+        document.getElementById(part).style.outlineStyle = "solid";
+        document.getElementById(part).style.outlineColor = "red"
+        allowed.forEach(function(elem){
+            if(elem !=part){
+                document.getElementById(elem).style.opacity = "0.5";
+            } 
+        } );
+    }
+}
+
 
 var dbname = "gmci";
 var dburl = "http://127.0.0.1:5984/" + dbname + "/";

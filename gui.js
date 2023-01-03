@@ -78,15 +78,32 @@ function selectBodyPart(part){
     })
     if(allowed.includes(part)){
          //set
-         console.log()
         document.getElementById(part).style.outlineStyle = "solid";
         document.getElementById(part).style.outlineColor = "red"
         allowed.forEach(function(elem){
             if(elem !=part){
                 document.getElementById(elem).style.opacity = "0.5";
             } 
-        } );
+        });
+        if(part == "head"){
+            //inject head and according map
+            document.getElementById("detail").innerHTML = 
+            `<img id="detail" src="head_detailed.png" alt="Head" usemap="#workmap">
+            <map name="workmap">
+                <area class="clothing" id="hat" shape="rect" coords="5,100,250,220" alt="hat" onclick="selectClothing('hat')">
+                <area class="clothing" id="glasses" shape="rect" coords="20,230,250,280" alt="glasses" onclick="selectClothing('glasses')">
+                <area class="clothing" id="earringLeft" shape="rect" coords="30,300,50,380" alt="earringLeft" onclick="selectClothing('earring')">
+                <area class="clothing" id="earringRight" shape="rect" coords="245,300,210,355" alt="earringRight" onclick="selectClothing('earring')">
+                <area class="clothing" id="scarf"  shape="circle" coords="130,500,80" alt="scarf" onclick="selectClothing('scarf')">
+            </map>`;
+        }
     }
+}
+
+function selectClothing(clothing){
+    console.log(clothing);
+    document.getElementById(clothing).style.opacity= "0.5";
+        document.getElementById(clothing).style.outlineColor = "red"
 }
 
 var dbname = "gmci";

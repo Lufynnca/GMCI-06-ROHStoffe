@@ -10,10 +10,6 @@
     gap: 10px;
     align-items: center;
   }
-  img {
-    max-width: 90%;
-    max-height: 90%;
-}
 .figure {
     display:flex;
     flex-direction: column;
@@ -24,6 +20,10 @@
     outline-color: black !important;
     opacity: 1 !important;
     cursor: pointer;
+}
+.clothing:hover{
+    cursor: pointer;
+    opacity: 0.5 !important;
 }
 </style>
 </head>
@@ -37,9 +37,8 @@
         <img class= "part" id = "body" src="body.png" alt="Body" onclick="selectBodyPart('body')">
         <img class= "part" id = "legs" src="legs.png" alt="Legs" onclick="selectBodyPart('legs')">
     </div>
-    <div class="detail">
+    <div class="detail" id="detail">
     </div>
 </div>
-
 </body>
 </html>

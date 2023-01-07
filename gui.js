@@ -1,73 +1,59 @@
-/*
-XMLHttpRequest:
-https://en.wikipedia.org/wiki/XMLHttpRequest
 
-CouchDB:
-http://guide.couchdb.org/draft/tour.html
-https://wiki.apache.org/couchdb/HTTP_Document_API
-http://docs.couchdb.org/en/1.6.1/config/intro.html
-http://docs.couchdb.org/en/1.6.1/config/http.html#cross-origin-resource-sharing
-http://docs.couchdb.org/en/1.6.1/intro/curl.html
+const headDiv = `<img id="detail" src="head_detailed.jpeg" alt="Head" usemap="#workmap">
+<map name="workmap">
+    <area class="clothing" id="hat" shape="poly" coords="145,190,150,130,270,110,340,130,360,190" alt="hat" onclick="selectClothing('hat')">
+    <area class="clothing" id="hat2" shape="circle" coords="260,85, 40" alt="hat" onclick="selectClothing('hat')">
+    <area class="clothing" id="glasses" shape="rect" coords="185,220,310,265" alt="glasses" onclick="selectClothing('glasses')">
+    <area class="clothing" id="earringLeft" shape="rect" coords="120,220,145,310" alt="earringLeft" onclick="selectClothing('earring')">
+    <area class="clothing" id="earringRight" shape="rect" coords="350,220,375,310" alt="earringRight" onclick="selectClothing('earring')">
+</map>`;
+const  bodyDiv = `<img id="detail" src="hoody_detailed.jpeg" alt="body" usemap="#workmap">
+<map name="workmap">
+    <area class="clothing" id="scarf" shape="poly" coords="210,45, 200,230, 260,230, 240,80, 280,80, 280,45" alt="scarf" onclick="selectClothing('scarf')">
+    <area class="clothing" id="hoody" shape="poly" coords="120,350, 140,100, 240,50, 300,70, 370,100, 370,320" alt="hoody" onclick="selectClothing('hoody')">
+    <area class="clothing" id="gloveLeft" shape="rect" coords="140,360 ,180,410" alt="gloveLeft" onclick="selectClothing('glove')">
+    <area class="clothing" id="gloveRight" shape="rect" coords="310,360 ,360,410" alt="gloveRight" onclick="selectClothing('glove')">
+</map>
+<button class="arrowRIGHT" onclick="changeBodyOutfit('summer')"></button>
+`
+const  tshirtDiv = `<img id="detail" src="tshirt_detailed.jpeg" alt="body" usemap="#workmap">
+<map name="workmap">
+    <area class="clothing" id="scarf" shape="poly" coords="210,45, 200,230, 260,230, 240,80, 280,80, 280,45" alt="scarf" onclick="selectClothing('scarf')">
+    <area class="clothing" id="hoody" shape="poly" coords="120,350, 140,100, 240,50, 300,70, 370,100, 370,320" alt="hoody" onclick="selectClothing('tshirt')">
+    <area class="clothing" id="gloveLeft" shape="rect" coords="140,360 ,180,410" alt="gloveLeft" onclick="selectClothing('glove')">
+    <area class="clothing" id="gloveRight" shape="rect" coords="310,360 ,360,410" alt="gloveRight" onclick="selectClothing('glove')">
+</map>
+<button class="arrowLEFT" onclick="changeBodyOutfit('winter')"></button>
+`
 
-HTML(5):
-http://www.w3schools.com/html/default.asp
-http://www.w3schools.com/jsref/default.asp
+const legsDiv = `<img id="detail"  src="jeans_detailed.jpeg" alt="Legs" usemap="#workmap">
+<map name="workmap">
+</map>
+<button class="arrowRIGHT" onclick="changeLegsOutfit('summer')"></button>
+`
 
-Local HTTP server (not strictly needed):
-python -m SimpleHTTPServer 8080
+const shortsDiv = `<img id="detail"  src="shorts_detailed.jpeg" alt="Legs" usemap="#workmap">
+<map name="workmap">
+</map>
+<button class="arrowLEFT" onclick="changeLegsOutfit('winter')"></button>
+`
 
-CouchDB configuration (Mac OS X):
-~/Library/Application Support/CouchDB/etc/couchdb/local.ini
-/Applications/Apache CouchDB.app/Contents/Resources/couchdbx-core/etc/couchdb/local.ini
-CouchDB configuration (Windows):
-C:\Program Files (x86)\Apache Software Foundation\CouchDB\etc\couchdb\local.ini
-start/stop/restart: Control Panel --> Services --> Apache CouchDB
-
-[httpd]
-enable_cors = true
-bind_address = 0.0.0.0
-[cors]
-origins = *
-*/
-
-var loginname = 'admin'
-var loginpass = 'admin'
-
-var request = new XMLHttpRequest();
-
-request.onreadystatechange = function() {
-    // console.log("onreadystatechange: " + request.readyState + ", " +  request.status);
-    // console.log(request.responseText);
-    if (request.readyState == 4) {
-        if (request.status == 200) {
-            var response = JSON.parse(request.responseText);
-            handlers[response._id](response);
-        }
-        if (request.status == 404) {
-            console.log("not found: " + request.responseText);
-        }
+function changeBodyOutfit(season){
+    if("summer" == season){
+        document.getElementById("detail").innerHTML = tshirtDiv
     }
-};
-
-function get(variable) {
-    // console.log("get " + variable);
-    request.open("GET", dburl + variable, false);
-	request.setRequestHeader("Authorization", "Basic " + btoa(loginname + ":" + loginpass));
-    request.send();
+    else if("winter" == season){
+        document.getElementById("detail").innerHTML = bodyDiv
+    }
 }
-
-/*function update() {
-    for (var name in handlers) {
-        // console.log("updating " + name);
-        get(name);
+function changeLegsOutfit(season){
+    if("summer" == season){
+        document.getElementById("detail").innerHTML = shortsDiv
     }
-}*/
-
-// request updates at a fixed interval (ms)
-var intervalID = setInterval(update, 1000);
-
-///////////////////////////////////////////////////////////////////////////////
-// your code below
+    else if("winter" == season){
+        document.getElementById("detail").innerHTML = legsDiv
+    }
+}
 function selectBodyPart(part){
     var allowed = ["head", "body", "legs"]
     //reset
@@ -87,52 +73,22 @@ function selectBodyPart(part){
         });
         if(part == "head"){
             //inject head and according map
-            document.getElementById("detail").innerHTML = 
-            `<img id="detail" src="head_detailed.png" alt="Head" usemap="#workmap">
-            <map name="workmap">
-                <area class="clothing" id="hat" shape="rect" coords="5,100,250,220" alt="hat" onclick="selectClothing('hat')">
-                <area class="clothing" id="glasses" shape="rect" coords="20,230,250,280" alt="glasses" onclick="selectClothing('glasses')">
-                <area class="clothing" id="earringLeft" shape="rect" coords="30,300,50,380" alt="earringLeft" onclick="selectClothing('earring')">
-                <area class="clothing" id="earringRight" shape="rect" coords="245,300,210,355" alt="earringRight" onclick="selectClothing('earring')">
-                <area class="clothing" id="scarf"  shape="circle" coords="130,500,80" alt="scarf" onclick="selectClothing('scarf')">
-            </map>`;
+            document.getElementById("detail").innerHTML = headDiv
+        }
+        else if(part == "body"){
+            //inject body and according map
+            document.getElementById("detail").innerHTML = bodyDiv
+        }
+        else if(part == "legs"){
+            //inject legs and according map
+            document.getElementById("detail").innerHTML = legsDiv
         }
     }
 }
 
 function selectClothing(clothing){
     console.log(clothing);
-    document.getElementById(clothing).style.opacity= "0.5";
-        document.getElementById(clothing).style.outlineColor = "red"
+    var allowed = ["hat", "glasses", "earring", "scarf", "hoody", "glove"]
 }
 
-var dbname = "gmci";
-var dburl = "http://127.0.0.1:5984/" + dbname + "/";
-var handlers = {
-    "animal" : updateAnimal,
-    "showCounter" : showCounter,
-    "counter" : updateCounter,
-    "mytext" : updateText,
-    // add further handlers here
-};
-
-function updateAnimal(response) {
-    document.getElementById(response._id).src = response.src;
-    document.getElementById(response._id).width = response.width;
-}
-
-function updateCounter(response) {
-    document.getElementById(response._id).innerHTML =
-        showCounter ? response.value : "";
-}
-
-var showCounter = true;
-
-function showCounter(response) {
-    showCounter = response.checked;
-}
-
-function updateText(response) {
-    document.getElementById("mytext").innerHTML = response.value;
-}
 

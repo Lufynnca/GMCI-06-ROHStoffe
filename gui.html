@@ -13,7 +13,7 @@
 .figure {
     display:flex;
     flex-direction: column;
-    gap: 2px
+    gap: 3px
 }
 .part:hover{
     outline-style: solid !important;
@@ -25,6 +25,41 @@
     cursor: pointer;
     opacity: 0.5 !important;
 }
+.detail {
+    position: relative;
+}
+.detail > img{
+    width: 500px;
+    height: 500px;
+}
+.arrowRIGHT{ 
+    position: fixed;
+    top: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+
+}
+.arrowRIGHT:hover{
+    cursor: pointer;
+    opacity: 0.5 !important;
+}
+.arrowLEFT{ 
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+
+}
+.arrowLEFT:hover{
+    cursor: pointer;
+    opacity: 0.5 !important;
+}
+
 </style>
 </head>
 <body>
@@ -33,12 +68,12 @@
 
 <div class= "container">
     <div class = "figure">
-        <img class ="part" id= "head" src="head.png" alt="Head" onclick="selectBodyPart('head')">
-        <img class= "part" id = "body" src="body.png" alt="Body" onclick="selectBodyPart('body')">
-        <img class= "part" id = "legs" src="legs.png" alt="Legs" onclick="selectBodyPart('legs')">
+        <img class ="part" id= "head" src="head.jpg" alt="Head" onclick="selectBodyPart('head')">
+        <img class= "part" id = "body" src="body.jpg" alt="Body" onclick="selectBodyPart('body')">
+        <img class= "part" id = "legs" src="legs.jpg" alt="Legs" onclick="selectBodyPart('legs')">
     </div>
-    <div class="detail" id="detail">
-    </div>
+    <div class="detail" id="detail"></div>
+    <div class="products" id="products">test</div> 
 </div>
 </body>
 </html>

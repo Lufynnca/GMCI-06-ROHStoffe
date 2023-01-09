@@ -8,35 +8,37 @@ const headDiv = `<img id="detail" src="head_detailed.jpeg" alt="Head" usemap="#w
     <area class="clothing" id="earringLeft" shape="rect" coords="120,220,145,310" alt="earringLeft" onclick="selectClothing('earrings')">
     <area class="clothing" id="earringRight" shape="rect" coords="350,220,375,310" alt="earringRight" onclick="selectClothing('earrings')">
 </map>`;
-const  bodyDiv = `<img id="detail" src="hoody_detailed.jpeg" alt="body" usemap="#workmap">
+const  bodyDiv = `
+<img id="detail" src="hoody_detailed.jpeg" alt="body" usemap="#workmap">
 <map name="workmap">
     <area class="clothing" id="scarf" shape="poly" coords="210,45, 200,230, 260,230, 240,80, 280,80, 280,45" alt="scarf" onclick="selectClothing('scarf')">
     <area class="clothing" id="hoody" shape="poly" coords="120,350, 140,100, 240,50, 300,70, 370,100, 370,320" alt="hoody" onclick="selectClothing('hoody')">
     <area class="clothing" id="gloveLeft" shape="rect" coords="140,360 ,180,410" alt="gloveLeft" onclick="selectClothing('gloves')">
     <area class="clothing" id="gloveRight" shape="rect" coords="310,360 ,360,410" alt="gloveRight" onclick="selectClothing('gloves')">
 </map>
-<button class="arrowRIGHT" onclick="changeBodyOutfit('summer')"></button>
+<button onclick="changeBodyOutfit('summer')">Sommer</button>
 `
-const  tshirtDiv = `<img id="detail" src="tshirt_detailed.jpeg" alt="body" usemap="#workmap">
+const  tshirtDiv = `
+<img id="detail" src="tshirt_detailed.jpeg" alt="body" usemap="#workmap">                 
 <map name="workmap">
     <area class="clothing" id="scarf" shape="poly" coords="210,45, 200,230, 260,230, 240,80, 280,80, 280,45" alt="scarf" onclick="selectClothing('scarf')">
     <area class="clothing" id="hoody" shape="poly" coords="120,350, 140,100, 240,50, 300,70, 370,100, 370,320" alt="hoody" onclick="selectClothing('tshirt')">
     <area class="clothing" id="gloveLeft" shape="rect" coords="140,360 ,180,410" alt="gloveLeft" onclick="selectClothing('gloves')">
     <area class="clothing" id="gloveRight" shape="rect" coords="310,360 ,360,410" alt="gloveRight" onclick="selectClothing('gloves')">
 </map>
-<button class="arrowLEFT" onclick="changeBodyOutfit('winter')"></button>
+<button onclick="changeBodyOutfit('winter')">Winter</button>
 `
 
 const legsDiv = `<img id="detail"  src="jeans_detailed.jpeg" alt="Legs" usemap="#workmap">
 <map name="workmap">
 </map>
-<button class="arrowRIGHT" onclick="changeLegsOutfit('summer')"></button>
+<button onclick="changeLegsOutfit('summer')">&nbsp;Sommer&nbsp;</button>
 `
 
 const shortsDiv = `<img id="detail"  src="shorts_detailed.jpeg" alt="Legs" usemap="#workmap">
 <map name="workmap">
 </map>
-<button class="arrowLEFT" onclick="changeLegsOutfit('winter')"></button>
+<button  onclick="changeLegsOutfit('winter')">&nbsp;Winter&nbsp;&nbsp;</button>
 `
 
 const clothes={
@@ -122,7 +124,10 @@ function selectClothing(clothing){
                 document.getElementById("products").innerHTML += `
                 <div class="productContainer">
                  <img class="clothes" src="${elem.image}" alt="${clothing}">
-                 <p>${clothing}         ${elem.price}$</p>
+                 <div style="display: flex; justify-content: space-between; background-color: lightgrey">
+                    <p style="text-allign : left;text-transform: capitalize;font-weight: bold;">	&nbsp;	&nbsp;${clothing}</p>
+                    <p style="text-allign : right;font-style: oblique;">${elem.price}$	&nbsp;</p>
+                </div>
                 </div>`
             })
     }

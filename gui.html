@@ -59,7 +59,23 @@
     cursor: pointer;
     opacity: 0.5 !important;
 }
-
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:5px 5px;
+}
+.productContainer{
+    outline: solid black 1px;
+}
+.productContainer > img{
+    width: 300px;
+    height: 300px;
+}
+.productContainer > p{
+    text-align: center;
+    font-size: 15px;
+}
 </style>
 </head>
 <body>
@@ -73,7 +89,7 @@
         <img class= "part" id = "legs" src="legs.jpg" alt="Legs" onclick="selectBodyPart('legs')">
     </div>
     <div class="detail" id="detail"></div>
-    <div class="products" id="products">test</div> 
+    <div class="products" id="products"></div> 
 </div>
 </body>
 </html>

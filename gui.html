@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ROHStoffe</title>
+<script type="text/javascript" src="gui.js"></script>
+<style>
+    body{
+        margin:0px;
+    }
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    color: black;
+    background-color: cornflowerblue;
+    border-bottom: 5px solid black;
+    margin:0px;
+    padding: 5px;
+    margin-bottom: 6px;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+  }
+.figure {
+    display:flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.part:hover{
+    outline-style: solid !important;
+    outline-color: black !important;
+    opacity: 1 !important;
+    cursor: pointer;
+}
+.clothing:hover{
+    cursor: pointer;
+    opacity: 0.5 !important;
+}
+.detail {
+    position: relative;
+}
+.detail > img{
+    width: 500px;
+    height: 500px;
+}
+.detail > button{
+    position: absolute;
+    top: 0px;
+    right: 42%;
+    size: 20px;
+    background-color: cornflowerblue;
+    outline: 1px solid black;
+    color: white;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+}
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:5px 5px;
+}
+.productContainer{
+    outline: solid black 1px;
+}
+.productContainer > img{
+    width: 300px;
+    height: 300px;
+}
+.productContainer > p{
+    text-align: center;
+    font-size: 15px;
+}
+</style>
+</head>
+<body>
+
+<h1>ROHStoffe</h1>
+
+<div class= "container">
+    <div class = "figure">
+        <img class ="part" id= "head" src="sketches/head.jpg" alt="Head" onclick="selectBodyPart('head')">
+        <img class= "part" id = "body" src="sketches/body.jpg" alt="Body" onclick="selectBodyPart('body')">
+        <img class= "part" id = "legs" src="sketches/legs.jpg" alt="Legs" onclick="selectBodyPart('legs')">
+    </div>
+    <div class="detail" id="detail"></div>
+    <div class="products" id="products"></div> 
+</div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 
 
-const headDiv = `<img id="detail" src="head_detailed.jpeg" alt="Head" usemap="#workmap">
+const headDiv = `<img id="detail" src="sketches/head_detailed.jpeg" alt="Head" usemap="#workmap">
 <map name="workmap">
     <area class="clothing" id="hat" shape="poly" coords="145,190,150,130,270,110,340,130,360,190" alt="hat" onclick="selectClothing('hat')">
     <area class="clothing" id="hat2" shape="circle" coords="260,85, 40" alt="hat" onclick="selectClothing('hat')">
@@ -9,7 +9,7 @@ const headDiv = `<img id="detail" src="head_detailed.jpeg" alt="Head" usemap="#w
     <area class="clothing" id="earringRight" shape="rect" coords="350,220,375,310" alt="earringRight" onclick="selectClothing('earrings')">
 </map>`;
 const  bodyDiv = `
-<img id="detail" src="hoody_detailed.jpeg" alt="body" usemap="#workmap">
+<img id="detail" src="sketches/hoody_detailed.jpeg" alt="body" usemap="#workmap">
 <map name="workmap">
     <area class="clothing" id="scarf" shape="poly" coords="210,45, 200,230, 260,230, 240,80, 280,80, 280,45" alt="scarf" onclick="selectClothing('scarf')">
     <area class="clothing" id="hoody" shape="poly" coords="120,350, 140,100, 240,50, 300,70, 370,100, 370,320" alt="hoody" onclick="selectClothing('hoody')">
@@ -19,7 +19,7 @@ const  bodyDiv = `
 <button onclick="changeBodyOutfit('summer')">Sommer</button>
 `
 const  tshirtDiv = `
-<img id="detail" src="tshirt_detailed.jpeg" alt="body" usemap="#workmap">                 
+<img id="detail" src="sketches/tshirt_detailed.jpeg" alt="body" usemap="#workmap">                 
 <map name="workmap">
     <area class="clothing" id="scarf" shape="poly" coords="210,45, 200,230, 260,230, 240,80, 280,80, 280,45" alt="scarf" onclick="selectClothing('scarf')">
     <area class="clothing" id="hoody" shape="poly" coords="120,350, 140,100, 240,50, 300,70, 370,100, 370,320" alt="hoody" onclick="selectClothing('tshirt')">
@@ -29,13 +29,13 @@ const  tshirtDiv = `
 <button onclick="changeBodyOutfit('winter')">Winter</button>
 `
 
-const legsDiv = `<img id="detail"  src="jeans_detailed.jpeg" alt="Legs" usemap="#workmap">
+const legsDiv = `<img id="detail"  src="sketches/jeans_detailed.jpeg" alt="Legs" usemap="#workmap">
 <map name="workmap">
 </map>
 <button onclick="changeLegsOutfit('summer')">&nbsp;Sommer&nbsp;</button>
 `
 
-const shortsDiv = `<img id="detail"  src="shorts_detailed.jpeg" alt="Legs" usemap="#workmap">
+const shortsDiv = `<img id="detail"  src="sketches/shorts_detailed.jpeg" alt="Legs" usemap="#workmap">
 <map name="workmap">
 </map>
 <button  onclick="changeLegsOutfit('winter')">&nbsp;Winter&nbsp;&nbsp;</button>

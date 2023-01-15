@@ -16,34 +16,41 @@ const  bodyDiv = `
     <area class="clothing" id="gloveLeft" shape="rect" coords="140,360 ,180,410" alt="gloveLeft" onclick="selectClothing('gloves')">
     <area class="clothing" id="gloveRight" shape="rect" coords="310,360 ,360,410" alt="gloveRight" onclick="selectClothing('gloves')">
 </map>
-<button onclick="changeBodyOutfit('summer')">Sommer</button>
+<button onclick="changeBodyOutfit('summer')">Wechseln zu Sommer</button>
 `
 const  tshirtDiv = `
 <img id="detail" src="sketches/tshirt_detailed.jpeg" alt="body" usemap="#workmap">                 
 <map name="workmap">
     <area class="clothing" id="scarf" shape="poly" coords="210,45, 200,230, 260,230, 240,80, 280,80, 280,45" alt="scarf" onclick="selectClothing('scarf')">
     <area class="clothing" id="hoody" shape="poly" coords="120,350, 140,100, 240,50, 300,70, 370,100, 370,320" alt="hoody" onclick="selectClothing('tshirt')">
-    <area class="clothing" id="gloveLeft" shape="rect" coords="140,360 ,180,410" alt="gloveLeft" onclick="selectClothing('gloves')">
+    <area class="clothing" id="gloveLeft" shape="rect" coords="150,370 ,180,410" alt="gloveLeft" onclick="selectClothing('gloves')">
     <area class="clothing" id="gloveRight" shape="rect" coords="310,360 ,360,410" alt="gloveRight" onclick="selectClothing('gloves')">
 </map>
-<button onclick="changeBodyOutfit('winter')">Winter</button>
+<button onclick="changeBodyOutfit('winter')">Wechseln zu Winter</button>
 `
 
 const legsDiv = `<img id="detail"  src="sketches/jeans_detailed.jpeg" alt="Legs" usemap="#workmap">
 <map name="workmap">
+<area class="clothing" id="jeans" shape="rect" coords="160,50, 310,390" alt="jeans" onclick="selectClothing('jeans')">
+<area class="clothing" id="shoeLeft" shape="rect" coords="160,390, 200,450" alt="shoes" onclick="selectClothing('shoes')">
+<area class="clothing" id="shoeRight" shape="rect" coords="270,390, 310,450" alt="shoes" onclick="selectClothing('shoes')">
 </map>
-<button onclick="changeLegsOutfit('summer')">&nbsp;Sommer&nbsp;</button>
+<button onclick="changeLegsOutfit('summer')">&nbsp;Wechseln zu Sommer&nbsp;</button>
 `
 
 const shortsDiv = `<img id="detail"  src="sketches/shorts_detailed.jpeg" alt="Legs" usemap="#workmap">
 <map name="workmap">
+<area class="clothing" id="shorts" shape="rect" coords="160,50, 310,390" alt="shorts" onclick="selectClothing('shorts')">
+<area class="clothing" id="shoeLeft" shape="rect" coords="160,390, 200,450" alt="shoes" onclick="selectClothing('shoes')">
+<area class="clothing" id="shoeRight" shape="rect" coords="270,390, 310,450" alt="shoes" onclick="selectClothing('shoes')">
 </map>
-<button  onclick="changeLegsOutfit('winter')">&nbsp;Winter&nbsp;&nbsp;</button>
+<button  onclick="changeLegsOutfit('winter')">&nbsp;Wechseln zu Winter&nbsp;&nbsp;</button>
 `
 
 const clothes={
     "hat": [
-        { "image" :"pictures/beanie1.png", "price" : "22,99" },{ "image" :"pictures/beanie2.png", "price" : "12,99" },{ "image" :"pictures/beanie3.png", "price" : "29,99" },{ "image" :"pictures/beanie4.png", "price" : "9,99" }
+        { "image" :"pictures/beanie1.png", "price" : "22,99" },{ "image" :"pictures/beanie2.png", "price" : "12,99" },{ "image" :"pictures/beanie3.png", "price" : "29,99" },{ "image" :"pictures/beanie4.png", "price" : "9,99" },
+        { "image" :"pictures/beanie5.png", "price" : "9,99" }, { "image" :"pictures/beanie6.png", "price" : "9,99" }
     ],
     "glasses": [
         {"image" :"pictures/googles1.png", "price" : "42,99" },{ "image" :"pictures/googles2.png", "price" : "200,99" },{ "image" :"pictures/googles3.png", "price" : "5,99" },{ "image" :"pictures/googles4.png", "price" : "2,99" }
@@ -55,13 +62,24 @@ const clothes={
         {"image":"pictures/scarf1.png","price":"7"},{"image":"pictures/scarf2.png","price":"20,31"},{"image":"pictures/scarf3.png","price":"1200,99"},{"image":"pictures/scarf4.png","price":"13,99"}
     ],
     "hoody":[
-        {"image":"pictures/hoody1.png","price":"730"},{"image":"pictures/hoody2.png","price":"10,11"},{"image":"pictures/hoody3.png","price":"12,5"},{"image":"pictures/hoody4.png","price":"49,99"}
+        {"image":"pictures/hoody1.png","price":"130"},{"image":"pictures/hoody2.png","price":"10,11"},{"image":"pictures/hoody3.png","price":"12,5"},{"image":"pictures/hoody4.png","price":"49,99"},
+        {"image":"pictures/hoody5.png","price":"730"}, {"image":"pictures/hoody6.png","price":"90,99"}, {"image":"pictures/hoody7.png","price":"120,99"},{"image":"pictures/hoody8.png","price":"79,99"}, 
+        {"image":"pictures/hoody9.png","price":"49.99"}
     ],
     "gloves":[
         {"image":"pictures/glove1.png","price":"12"},{"image":"pictures/glove2.png","price":"14,99"},{"image":"pictures/glove3.png","price":"120,99"},{"image":"pictures/glove4.png","price":"13,99"}
     ],
     "tshirt":[
-        {"image":"pictures/tshirt1.png","price":"32"},{"image":"pictures/tshirt2.png","price":"21,99"},{"image":"pictures/tshirt3.png","price":"52,99"},{"image":"pictures/tshirt4.png","price":"42,99"}
+        {"image":"pictures/tshirt1.png","price":"32"},{"image":"pictures/tshirt2.png","price":"21,99"},{"image":"pictures/tshirt3.png","price":"52,99"},{"image":"pictures/tshirt4.png","price":"42,99"},
+    ], 
+    "jeans":[
+        {"image":"pictures/jeans1.png","price":"32"},{"image":"pictures/jeans2.png","price":"21,99"},{"image":"pictures/jeans3.png","price":"52,99"},{"image":"pictures/jeans4.png","price":"42,99"}
+    ],
+    "shorts":[
+        {"image":"pictures/shorts1.png","price":"32"},{"image":"pictures/shorts2.png","price":"21,99"},{"image":"pictures/shorts3.png","price":"52,99"},{"image":"pictures/shorts4.png","price":"42,99"}
+    ],
+    "shoes":[
+        {"image":"pictures/shoes1.png","price":"32"},{"image":"pictures/shoes2.png","price":"21,99"},{"image":"pictures/shoes3.png","price":"52,99"},{"image":"pictures/shoes4.png","price":"42,99"}
     ]
     }
 function changeBodyOutfit(season){
@@ -116,7 +134,7 @@ function selectBodyPart(part){
 
 function selectClothing(clothing){
     console.log(clothing);
-    var allowed = ["hat", "glasses", "earrings", "scarf", "hoody", "gloves", "tshirt"]
+    var allowed = ["hat", "glasses", "earrings", "scarf", "hoody", "gloves", "tshirt", "jeans", "shorts", "shoes"]
     if(allowed.includes(clothing)){
         document.getElementById("products").innerHTML = ""
         //inject

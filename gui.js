@@ -98,7 +98,6 @@ function changeLegsOutfit(season){
         document.getElementById("detail").innerHTML = legsDiv
     }
 }
-
 function selectBodyPart(part){
     var allowed = ["head", "body", "legs"]
     //reset
@@ -120,19 +119,25 @@ function selectBodyPart(part){
         if(part == "head"){
             //inject head and according map
             document.getElementById("detail").innerHTML = headDiv;
-            document.getElementById("bodypart").innerHTML = "head";
+            document.getElementById("bodypart").innerHTML = "/ head";
         }
         else if(part == "body"){
             //inject body and according map
             document.getElementById("detail").innerHTML = bodyDiv;
-            document.getElementById("bodypart").innerHTML = "body";
+            document.getElementById("bodypart").innerHTML = "/ body";
         }
         else if(part == "legs"){
             //inject legs and according map
             document.getElementById("detail").innerHTML = legsDiv;
-            document.getElementById("bodypart").innerHTML = "legs";
+            document.getElementById("bodypart").innerHTML = "/ legs";
         }
     }
+}
+
+function breadcrumbJump(){
+    let part = document.getElementById("bodypart").innerHTML;
+    document.getElementById("breadcrump_bodyparts").innerHTML = "";
+    selectBodyPart(part);
 }
 
 function selectClothing(clothing){
@@ -150,7 +155,7 @@ function selectClothing(clothing){
                     <p style="text-allign : right;font-style: oblique;">${elem.price}$	&nbsp;</p>
                 </div>
                 </div>`
-                document.getElementById("breadcrump_bodyparts").innerHTML = clothing;
+                document.getElementById("breadcrump_bodyparts").innerHTML = "/ " +  clothing;
             })
     }
 }

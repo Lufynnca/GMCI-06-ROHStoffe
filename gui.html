@@ -95,7 +95,6 @@ ul.breadcrumb li {
 ul.breadcrumb li+li:before {
   padding: 8px;
   color: black;
-  content: "/\00a0";
 }
 ul.breadcrumb li a {
   color: #0275d8;
@@ -112,7 +111,7 @@ ul.breadcrumb li a:hover {
 <h1>ROHStoffe</h1>
 <ul class="breadcrumb">
   <li><a href="http://127.0.0.1:5500/gui.html">Home</a></li>
-  <li><a id="bodypart"></a></li>
+  <li><a id="bodypart" onclick="breadcrumbJump()"></a></li>
   <li><a id="breadcrump_bodyparts"></a></li>
 </ul>
 <div class= "container">

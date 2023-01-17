@@ -25,6 +25,13 @@ h1{
     gap: 10px;
     align-items: center;
   }
+.container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+  }
 .figure {
     display:flex;
     flex-direction: column;
@@ -104,6 +111,37 @@ ul.breadcrumb li a:hover {
   color: #01447e;
   text-decoration: underline;
 }
+.dropbtn {
+  background-color: cornflowerblue;
+  margin: 2px;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: cornflowerblue;}
+
 </style>
 </head>
 <body>
@@ -121,7 +159,10 @@ ul.breadcrumb li a:hover {
         <img class= "part" id = "legs" src="sketches/legs.jpg" alt="Legs" onclick="selectBodyPart('legs')">
     </div>
     <div class="detail" id="detail"></div>
-    <div class="products" id="products"></div>
+    <div class="container3">
+          <div classs = "dropdown_container" id="dropdown_container"></div>
+          <div class="products" id="products"></div>
+    </div>
 </div>
 </body>
 </html>

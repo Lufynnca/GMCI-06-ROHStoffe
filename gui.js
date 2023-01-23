@@ -49,37 +49,37 @@ const shortsDiv = `<img id="detail"  src="sketches/shorts_detailed.jpeg" alt="Le
 
 const clothes={
     "hat": [
-        { "image" :"pictures/beanie1.png", "price" : "22,99" },{ "image" :"pictures/beanie2.png", "price" : "12,99" },{ "image" :"pictures/beanie3.png", "price" : "29,99" },{ "image" :"pictures/beanie4.png", "price" : "9,99" },
-        { "image" :"pictures/beanie5.png", "price" : "9,99" }, { "image" :"pictures/beanie6.png", "price" : "9,99" }
+        { "info" : "So etwas schickes gabs noch nie", "name" : "Beanie", "image" :"pictures/beanie1.png", "price" : "22.99" },{ "info" : "Dieser tolle Artikel ist richtig nice", "name" : "Beanie", "image" :"pictures/beanie2.png", "price" : "12.99" },{ "info" : "So etwas schickes gabs noch nie", "name" : "Beanie", "image" :"pictures/beanie3.png", "price" : "29.99" },{ "info" : "Dieser tolle Artikel ist richtig nice", "name" : "Beanie", "image" :"pictures/beanie4.png", "price" : "9.99" },
+        { "info" : "So etwas schickes gabs noch nie", "name" : "Baseball Cap", "image" :"pictures/beanie5.png", "price" : "9.99" }, { "info" : "Hiermit lässt sich ganz einfach nach  P reduzieren", "name" : "Heribertus Hut", "image" :"pictures/beanie6.png", "price" : "9.99" }
     ],
     "glasses": [
-        {"image" :"pictures/googles1.png", "price" : "42,99" },{ "image" :"pictures/googles2.png", "price" : "200,99" },{ "image" :"pictures/googles3.png", "price" : "5,99" },{ "image" :"pictures/googles4.png", "price" : "2,99" }
+        { "info" : "Auch Unterwasser schnell unterwegs", "name" : "Goggles", "image" :"pictures/googles1.png", "price" : "42.99" },{ "info" : "Für die ultimativen Beach Vibes", "name" : "Goggles", "image" :"pictures/googles2.png", "price" : "200.99" },{ "info" : "Für klare Sicht im Trüben", "name" : "Goggles", "image" :"pictures/googles3.png", "price" : "5.99" },{ "info" : "Für tolle Aussichten", "name" : "Goggles", "image" :"pictures/googles4.png", "price" : "2.99" }
     ],
     "earrings": [
-        {"image":"pictures/earring1.png","price":"70"},{"image":"pictures/earring2.png","price":"420,11"},{"image":"pictures/earring3.png","price":"4,5"},{"image":"pictures/earring4.png","price":"12,99"}
+        {"info" : "So etwas schickes gabs noch nie", "name" : "Earrings", "image":"pictures/earring1.png","price":"70.00"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Earrings", "image":"pictures/earring2.png","price":"420.11"},{"info" : "So etwas schickes gabs noch nie", "name" : "Earrings", "image":"pictures/earring3.png","price":"4.99"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Earrings", "image":"pictures/earring4.png","price":"12.99"}
     ],
     "scarf":[
-        {"image":"pictures/scarf1.png","price":"7"},{"image":"pictures/scarf2.png","price":"20,31"},{"image":"pictures/scarf3.png","price":"1200,99"},{"image":"pictures/scarf4.png","price":"13,99"}
+        {"info" : "So etwas schickes gabs noch nie", "name" : "Scarf", "image":"pictures/scarf1.png","price":"7.99"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Scarf", "image":"pictures/scarf2.png","price":"20,31"},{"info" : "So etwas schickes gabs noch nie", "name" : "Scarf", "image":"pictures/scarf3.png","price":"1200.99"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Scarf", "image":"pictures/scarf4.png","price":"13.99"}
     ],
     "hoody":[
-        {"image":"pictures/hoody1.png","price":"130"},{"image":"pictures/hoody2.png","price":"10,11"},{"image":"pictures/hoody3.png","price":"12,5"},{"image":"pictures/hoody4.png","price":"49,99"},
-        {"image":"pictures/hoody5.png","price":"730"}, {"image":"pictures/hoody6.png","price":"90,99"}, {"image":"pictures/hoody7.png","price":"120,99"},{"image":"pictures/hoody8.png","price":"79,99"}, 
-        {"image":"pictures/hoody9.png","price":"49.99"}
+        {"info" : "So etwas schickes gabs noch nie", "name" : "Hoody", "image":"pictures/hoody1.png","price":"130.00"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Hoody", "image":"pictures/hoody2.png","price":"10.11"},{"info" : "So etwas schickes gabs noch nie", "name" : "Hoody", "image":"pictures/hoody3.png","price":"12.50"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Hoody", "image":"pictures/hoody4.png","price":"49.99"},
+        {"info" : "So etwas schickes gabs noch nie", "name" : "Jacket", "image":"pictures/hoody5.png","price":"730.00"}, {"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Jacket", "image":"pictures/hoody6.png","price":"90.99"}, {"info" : "So etwas schickes gabs noch nie", "name" : "Jacket", "image":"pictures/hoody7.png","price":"120.99"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Jacket", "image":"pictures/hoody8.png","price":"79.99"}, 
+        {"info" : "So etwas schickes gabs noch nie", "name" : "Jacket", "image":"pictures/hoody9.png","price":"49.99"}
     ],
     "gloves":[
-        {"image":"pictures/glove1.png","price":"12"},{"image":"pictures/glove2.png","price":"14,99"},{"image":"pictures/glove3.png","price":"120,99"},{"image":"pictures/glove4.png","price":"13,99"}
+        {"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Gloves", "image":"pictures/glove1.png","price":"12.00"},{"info" : "So etwas schickes gabs noch nie", "name" : "Gloves", "image":"pictures/glove2.png","price":"14.99"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Gloves", "image":"pictures/glove3.png","price":"120.99"},{"info" : "So etwas schickes gabs noch nie", "name" : "Gloves", "image":"pictures/glove4.png","price":"13.99"}
     ],
     "tshirt":[
-        {"image":"pictures/tshirt1.png","price":"32"},{"image":"pictures/tshirt2.png","price":"21,99"},{"image":"pictures/tshirt3.png","price":"52,99"},{"image":"pictures/tshirt4.png","price":"42,99"},
+        {"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Shirt", "image":"pictures/tshirt1.png","price":"32.00"},{"info" : "So etwas schickes gabs noch nie", "name" : "Shirt", "image":"pictures/tshirt2.png","price":"21.99"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Shirt", "image":"pictures/tshirt3.png","price":"52.99"},{"info" : "So etwas schickes gabs noch nie", "name" : "Shirt", "image":"pictures/tshirt4.png","price":"42.99"},
     ], 
     "jeans":[
-        {"image":"pictures/jeans1.png","price":"32"},{"image":"pictures/jeans2.png","price":"21,99"},{"image":"pictures/jeans3.png","price":"52,99"},{"image":"pictures/jeans4.png","price":"42,99"}
+        {"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Jeans", "image":"pictures/jeans1.png","price":"32.00"},{"info" : "So etwas schickes gabs noch nie", "name" : "Jeans", "image":"pictures/jeans2.png","price":"21.99"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Jeans", "image":"pictures/jeans3.png","price":"52.99"},{"info" : "So etwas schickes gabs noch nie", "name" : "Jeans", "image":"pictures/jeans4.png","price":"42.99"}
     ],
     "shorts":[
-        {"image":"pictures/shorts1.png","price":"32"},{"image":"pictures/shorts2.png","price":"21,99"},{"image":"pictures/shorts3.png","price":"52,99"},{"image":"pictures/shorts4.png","price":"42,99"}
+        {"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Shorts", "image":"pictures/shorts1.png","price":"32.00"},{"info" : "So etwas schickes gabs noch nie", "name" : "Shorts", "image":"pictures/shorts2.png","price":"21.99"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Shorts", "image":"pictures/shorts3.png","price":"52.99"},{"info" : "So etwas schickes gabs noch nie", "name" : "Shorts", "image":"pictures/shorts4.png","price":"42.99"}
     ],
     "shoes":[
-        {"image":"pictures/shoes1.png","price":"32"},{"image":"pictures/shoes2.png","price":"21,99"},{"image":"pictures/shoes3.png","price":"52,99"},{"image":"pictures/shoes4.png","price":"42,99"}
+        {"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Sneaker", "image":"pictures/shoes1.png","price":"32.00"},{"info" : "So etwas schickes gabs noch nie", "name" : "Sneaker", "image":"pictures/shoes2.png","price":"21.99"},{"info" : "Dieser tolle Artikel ist richtig nice", "name" : "Sneaker", "image":"pictures/shoes3.png","price":"52.99"},{"info" : "So etwas schickes gabs noch nie", "name" : "Sneaker", "image":"pictures/shoes4.png","price":"42.99"}
     ]
     }
 function changeBodyOutfit(season){
@@ -134,6 +134,22 @@ function selectBodyPart(part){
     }
 }
 
+function showPopup(price, image, name, info) {
+    console.log(image); 
+    console.log(price);
+    var popup = document.getElementById("popup");
+    popup.classList.add("show-popup"); 
+    document.getElementById("popupText").innerHTML = info;
+    document.getElementById("popupPrice").innerHTML = "unschlagbare  " + price + "$";
+    document.getElementById("popupImage").src=image; 
+    document.getElementById("popupTitle").innerHTML = name;
+}
+
+function closePopup() {
+    var popup = document.getElementById("popup");
+    popup.classList.remove("show-popup"); 
+}
+
 function breadcrumbJump(){
     let part = document.getElementById("bodypart").innerHTML;
     document.getElementById("breadcrump_bodyparts").innerHTML = "";
@@ -149,8 +165,9 @@ function selectClothing(clothing){
         clothes[clothing].forEach(function(elem){
                 document.getElementById("products").innerHTML += `
                 <div class="productContainer">
-                 <img class="clothes" src="${elem.image}" alt="${clothing}">
-                 <div style="display: flex; justify-content: space-between; background-color: lightgrey">
+                <div class="productContainer" onClick="showPopup(${elem.price}, '${elem.image}', '${elem.name}', '${elem.info}')">
+                <img class="clothes" src="${elem.image}" alt="${clothing}"> 
+                <div style="display: flex; justify-content: space-between; background-color: lightgrey">
                     <p style="text-allign : left;text-transform: capitalize;font-weight: bold;">	&nbsp;	&nbsp;${clothing}</p>
                     <p style="text-allign : right;font-style: oblique;">${elem.price}$	&nbsp;</p>
                 </div>

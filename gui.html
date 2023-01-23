@@ -79,12 +79,58 @@ h1{
     text-align: center;
     font-size: 15px;
 }
+
+.popup{
+    visibility: hidden;
+    width: 500px; 
+    height: 500px; 
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 6px;
+    border-color: cornflowerblue;
+    background: white; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+}
+
+.popup img{
+    width: 300px;
+    height: 300px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+    font-size: 38px; 
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.show-popup{
+    visibility: visible;
+}
+
+
+.popup button{
+    width: 100px; 
+    height: 50px; 
+    padding: 10px 0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 0; 
+    outline: none;
+    border-radius: 30px;
+    background-color: cornflowerblue;
+}
+
 </style>
 </head>
 <body>
 
 <h1>ROHStoffe</h1>
-
 <div class= "container">
     <div class = "figure">
         <img class ="part" id= "head" src="sketches/head.jpg" alt="Head" onclick="selectBodyPart('head')">
@@ -93,6 +139,14 @@ h1{
     </div>
     <div class="detail" id="detail"></div>
     <div class="products" id="products"></div> 
+    <!-- popup -->
+    <div class="popup" id="popup">
+        <h2 id="popupTitle"></h2>
+        <img id="popupImage">
+        <p id="popupText"></p>
+        <p id="popupPrice"></p>
+        <button onclick="closePopup()">Zurück</button>
+    </div>
 </div>
 </body>
 </html>

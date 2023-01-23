@@ -203,7 +203,7 @@ function selectClothing(clothing){
         //inject
         clothes[clothing].forEach(function(elem){
                 document.getElementById("products").innerHTML += `
-                <div class="productContainer">
+                <div class="productContainer"  onClick="showPopup('${elem.price}', '${elem.image}', '${elem.name}', '${elem.description}', '${elem.color}','${elem.size}')">
                  <img class="clothes" src="${elem.image}" alt="${elem.name}">
                  <div style="display: flex; justify-content: space-between; background-color: lightgrey">
                     <p style="text-allign : left;text-transform: capitalize;font-weight: bold;">	&nbsp;	&nbsp;${elem.name}</p>
@@ -222,7 +222,7 @@ function filterClothing(clothing, input){
         if(elem.size.includes(input.innerHTML) || elem.color.includes(input.innerHTML)){
             set = true
             document.getElementById("products").innerHTML += `
-        <div class="productContainer">
+        <div class="productContainer" onClick="showPopup('${elem.price}', '${elem.image}', '${elem.name}', '${elem.description}', '${elem.color}','${elem.size}')">
          <img class="clothes" src="${elem.image}" alt="${elem.name}">
          <div style="display: flex; justify-content: space-between; background-color: lightgrey">
             <p style="text-allign : left;text-transform: capitalize;font-weight: bold;">	&nbsp;	&nbsp;${elem.name}</p>
@@ -235,4 +235,20 @@ function filterClothing(clothing, input){
         document.getElementById("products").innerHTML = '<p style="font-size: larger; font-weight: bold;">No Resuls for these filters</p>'
     }
 }
+function showPopup(price, image, name, info, color, size) {
+    console.log(image); 
+    console.log(price);
+    var popup = document.getElementById("popup");
+    popup.classList.add("show-popup"); 
+    document.getElementById("popupText").innerHTML = info;
+    document.getElementById("popupColor").innerHTML = "Colors: " +color;
+    document.getElementById("popupSize").innerHTML = "Sizes: " +size;
+    document.getElementById("popupPrice").innerHTML = "Unbeatable  " + price + "$";
+    document.getElementById("popupImage").src=image; 
+    document.getElementById("popupTitle").innerHTML = name;
+}
 
+function closePopup() {
+    var popup = document.getElementById("popup");
+    popup.classList.remove("show-popup"); 
+}

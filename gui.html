@@ -106,7 +106,35 @@ ul.breadcrumb li a:hover {
 
 <h1>ROHStoffe</h1>
 <ul class="breadcrumb">
-  <li><a href="http://127.0.0.1:5500/gui.html">Home</a></li>
+  <li><a href="http://127.0.0.1:5500/gui.html">Home</a>
+     <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="container">
+    <div class="filterDiv cars">Größe</div>
+    <select name="" id="languages">
+        <option value="">XS</option>
+        <option value="">S</option>
+        <option value="">M</option>
+        <option value="">L</option>
+        <option value="">XL</option>
+        <option value="">XXL</option>
+    </select>
+    <div class="filterDiv cars">Farbe</div>
+    <select name="" id="Farben">
+        <option value="">Blau</option>
+
+        // ...
+    </select>
+    <div class="filterDiv cars">Pass Form</div>
+    <select name="" id="Pass Form">
+        <option value="">Relaxed</option>
+
+        // ...
+    </select>
+
+
+  </div>
+
+  </li>
   <li><a id="bodypart" onclick="breadcrumbJump()"></a></li>
   <li><a id="breadcrump_bodyparts"></a></li>
 </ul>

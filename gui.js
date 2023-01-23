@@ -49,37 +49,71 @@ const shortsDiv = `<img id="detail"  src="sketches/shorts_detailed.jpeg" alt="Le
 
 const clothes={
     "hat": [
-        { "image" :"pictures/beanie1.png", "price" : "22,99" },{ "image" :"pictures/beanie2.png", "price" : "12,99" },{ "image" :"pictures/beanie3.png", "price" : "29,99" },{ "image" :"pictures/beanie4.png", "price" : "9,99" },
-        { "image" :"pictures/beanie5.png", "price" : "9,99" }, { "image" :"pictures/beanie6.png", "price" : "9,99" }
+        { "image" :"pictures/beanie1.png", "price" : "22,99", "name" : "red beanie", "description":"A red beanie made of wool", "color":"red", "size":"S"},
+        { "image" :"pictures/beanie2.png", "price" : "12,99", "name" : "beige beanie", "description":"A beige beanie made of polyester", "color":"white", "size":"M" },
+        { "image" :"pictures/beanie3.png", "price" : "29,99", "name" : "green beanie", "description": "A green beanie made of cotton and plolyester", "color":"green", "size":"S,L" },
+        { "image" :"pictures/beanie4.png", "price" : "9,99",    "name" : "grey cap", "description" : "A grey cap made of polyester", "color":"red", "size":"S,M"},
+        { "image" :"pictures/beanie5.png", "price" : "9,99",    "name" : "black cap", "description" : "A black dad cap", "color":"black", "size":"L"}, 
+        { "image" :"pictures/beanie6.png", "price" : "9,99",    "name" : "cowboyhat", "description" : "a cowboyhat made of synthetic leather", "color":"red", "size":"S,M,L"},
     ],
     "glasses": [
-        {"image" :"pictures/googles1.png", "price" : "42,99" },{ "image" :"pictures/googles2.png", "price" : "200,99" },{ "image" :"pictures/googles3.png", "price" : "5,99" },{ "image" :"pictures/googles4.png", "price" : "2,99" }
+        {"image" :"pictures/googles1.png", "price" : "10,99" , "name" : "swimgoogles","description":"Swimming googles for the pool", "color":"green,yellow", "size":"M"},
+        { "image" :"pictures/googles2.png", "price" : "200,99", "name" :"designer glasses", "description":"glasses made by cuggi", "color":"black", "size":"S,L" },
+        { "image" :"pictures/googles3.png", "price" : "50,99", "name": "casual glasses", "description": "casual glasses made by hommy tilfiger",  "color" : "blue,black", "size" : "M,L" },
+        { "image" :"pictures/googles4.png", "price" : "2,99", "name": "childrens Glasses", "description" : "glasses made for children", "color" : "white", "size" : "S" },
     ],
     "earrings": [
-        {"image":"pictures/earring1.png","price":"70"},{"image":"pictures/earring2.png","price":"420,11"},{"image":"pictures/earring3.png","price":"4,5"},{"image":"pictures/earring4.png","price":"12,99"}
+        {"image":"pictures/earring1.png","price":"70", "name" : "golden pink earrings", "description":"earrings made of gold with a pink crystall", "color":"red, yellow", "size":"S,M"},
+        {"image":"pictures/earring2.png","price":"420,11", "name" : "amethyst earrings", "description":"earrings made of silver inbedded with amethyst", "color":"red", "size":"M,L"},
+        {"image":"pictures/earring3.png","price":"450", "name" : "diamond earrings", "description":"earrings made of silver inbedded with diamonds", "color":"white", "size":"M,L"},
+        {"image":"pictures/earring4.png","price":"12,99", "name": "childrens flower earrings", "description" : "earrings made for children picturing flowers", "color" : "white, black", "size" : "S" },
     ],
     "scarf":[
-        {"image":"pictures/scarf1.png","price":"7"},{"image":"pictures/scarf2.png","price":"20,31"},{"image":"pictures/scarf3.png","price":"1200,99"},{"image":"pictures/scarf4.png","price":"13,99"}
+        {"image":"pictures/scarf1.png","price":"7", "name" : "grandma scarf", "description":"a black  scarf made of wool", "color":"white, black", "size":"M,L"},
+        {"image":"pictures/scarf2.png","price":"20,31", "name" : "salmon-colored scarf", "description":"a salmon-colored scarf made of wool and polyester", "color":"red", "size":"L"},
+        {"image":"pictures/scarf3.png","price":"1200,99",   "name" : "hippie scarf", "description":"a hippie scarf in multiple colors made of wool", "color":"white, blue, green, red", "size":"M"},
+        {"image":"pictures/scarf4.png","price":"13,99", "name": "two parts Scarf", "description" : "a scarf made of two segments", "color" : "black, green, yellow", "size" : "S,M" },
     ],
     "hoody":[
-        {"image":"pictures/hoody1.png","price":"130"},{"image":"pictures/hoody2.png","price":"10,11"},{"image":"pictures/hoody3.png","price":"12,5"},{"image":"pictures/hoody4.png","price":"49,99"},
-        {"image":"pictures/hoody5.png","price":"730"}, {"image":"pictures/hoody6.png","price":"90,99"}, {"image":"pictures/hoody7.png","price":"120,99"},{"image":"pictures/hoody8.png","price":"79,99"}, 
-        {"image":"pictures/hoody9.png","price":"49.99"}
+        {"image":"pictures/hoody1.png","price":"130", "name" : "designer hoody", "description":"a black hoody made by cuggi", "color":"black", "size":"M,L"},
+        {"image":"pictures/hoody2.png","price":"10,11", "name" : "casual hoody", "description":"a blue hoody made from cotton and polyester", "color":"blue", "size":"M"},
+        {"image":"pictures/hoody3.png","price":"12,5", "name" : "childrens hoody", "description":"a hoody made for children", "color":"red, green", "size":"S"},
+        {"image":"pictures/hoody4.png","price":"49,99", "name" : "Surfer hoody", "description":"a hoody made from cotton for surfers", "color":"black, white, blue", "size":"S,M,L"},
+        {"image":"pictures/hoody5.png","price":"730", "name" : "designer jacket", "description":"a black jacket madfe by cuggi", "color":"black", "size":"S,M"}, 
+        {"image":"pictures/hoody6.png","price":"90,99", "name" : "long coat", "description":"a blue coat made from cotton an polyester", "color":"blue", "size":"M"}, 
+        {"image":"pictures/hoody7.png","price":"120,99", "name" : "fur coat", "description":"a beige fur coat made from synthetic fur", "color":"yellow, white", "size":"S,M"},
+        {"image":"pictures/hoody8.png","price":"79,99", "name" : "puffer jacket", "description":"a black puffer jacket made from polyester", "color":"black", "size":"L"}, 
+        {"image":"pictures/hoody9.png","price":"49.99","name" : "rain jacket", "description":"a red rain jacke", "color":"black", "size":"S,M"},
     ],
     "gloves":[
-        {"image":"pictures/glove1.png","price":"12"},{"image":"pictures/glove2.png","price":"14,99"},{"image":"pictures/glove3.png","price":"120,99"},{"image":"pictures/glove4.png","price":"13,99"}
+        {"image":"pictures/glove1.png","price":"12", "name" : "biking gloves", "description":"a pair of thin gloves made from biking", "color":"black, blue", "size":"M" },
+        {"image":"pictures/glove2.png","price":"14,99", "name" : "winter gloves", "description":"a pair of thick gloves that are made for the winter", "color":"black", "size":"S, M"},
+        {"image":"pictures/glove3.png","price":"120,99", "name" : "working gloves", "description":"a pair of gloves made for working outside in cold weather", "color":"black, red", "size":"S,M, L"}
+        ,{"image":"pictures/glove4.png","price":"13,99", "name" : "childrens gloves", "description":"a pair of multicolored gloves made for children", "color":"green, red, blue", "size":"S" },
     ],
     "tshirt":[
-        {"image":"pictures/tshirt1.png","price":"32"},{"image":"pictures/tshirt2.png","price":"21,99"},{"image":"pictures/tshirt3.png","price":"52,99"},{"image":"pictures/tshirt4.png","price":"42,99"},
+        {"image":"pictures/tshirt1.png","price":"32", "name" : "designer tshirt", "description":"a black and white tshirt made by cuggi", "color":"white, black", "size":"M,L"},
+        {"image":"pictures/tshirt2.png","price":"121,99", "name" : "casual tshirt", "description":"a blue tshirt made from cotton and polyester", "color":"blue", "size":"M"},
+        {"image":"pictures/tshirt3.png","price":"52,99", "name" : "childrens tshirt", "description":"a tshirt made for children", "color":"red, green", "size":"S"},
+        {"image":"pictures/tshirt4.png","price":"42,99",    "name" : "plain tshirt", "description":"a plain white tshirt made from cotton ", "color":"white", "size":"S,M,L"},
     ], 
     "jeans":[
-        {"image":"pictures/jeans1.png","price":"32"},{"image":"pictures/jeans2.png","price":"21,99"},{"image":"pictures/jeans3.png","price":"52,99"},{"image":"pictures/jeans4.png","price":"42,99"}
+        {"image":"pictures/jeans1.png","price":"32", "name" : "looste-fit jeans", "description":"a black jeans made from cotton with a loose fit ", "color":"blue", "size":"M,L"},
+        {"image":"pictures/jeans2.png","price":"21,99", "name" : "casual jeans", "description":"a blue jeans made from cotton and polyester", "color":"blue", "size":"M"},
+        {"image":"pictures/jeans3.png","price":"152,99", "name" : "suit pants", "description":"a pair of suits pants made by cuggi", "color":"black, green", "size":"S,M,L"},
+        {"image":"pictures/jeans4.png","price":"42,99", "name" : "skinny jeans", "description":"a pair of skinny jeans made from cotton", "color":"black", "size":"S,M,L"},
     ],
     "shorts":[
-        {"image":"pictures/shorts1.png","price":"32"},{"image":"pictures/shorts2.png","price":"21,99"},{"image":"pictures/shorts3.png","price":"52,99"},{"image":"pictures/shorts4.png","price":"42,99"}
+        {"image":"pictures/shorts1.png","price":"32", "name" : "designer shorts", "description":" shorts made from cotton by cuggi", "color":"blue", "size":"M,L"},
+        {"image":"pictures/shorts2.png","price":"21,99", "name" : "skirt", "description":"skirt made from polyester", "color":"white, black", "size":"S,M"},
+        {"image":"pictures/shorts3.png","price":"52,99", "name" : "cropped shorts", "description":"cropped shorts made from cotton and polyester", "color":"white", "size":"M,L"},
+        {"image":"pictures/shorts4.png","price":"42,99", "name" : "shorts shorts", "description":"short shorts made from cotton", "color":"red", "size":"M,L"},
     ],
     "shoes":[
-        {"image":"pictures/shoes1.png","price":"32"},{"image":"pictures/shoes2.png","price":"21,99"},{"image":"pictures/shoes3.png","price":"52,99"},{"image":"pictures/shoes4.png","price":"42,99"}
+        {"image":"pictures/shoes1.png","price":"32", "name" : "running shoes", "description":"a pair of shoes made for running", "color":"yellow, black, blue, white", "size":"S,M"},
+        {"image":"pictures/shoes2.png","price":"61,99", "name" : "designer sneakers", "description":"a pair of white sneakers mady by hommy tilfiger", "color":"black, white", "size":"M,L"},
+        {"image":"pictures/shoes3.png","price":"52,99", "name" : "sport shooes", "description":"a pair of shoes that can be used for sports", "color":"black", "size":"S"},
+        {"image":"pictures/shoes4.png","price":"42,99", "name" : "snearkers", "description":"a pair of sneakers", "color":"white", "size":"M,L"},
     ]
     }
 function changeBodyOutfit(season){
@@ -102,6 +136,7 @@ function selectBodyPart(part){
     var allowed = ["head", "body", "legs"]
     //reset
     document.getElementById("products").innerHTML = ""
+    document.getElementById("dropdown_container").innerHTML = ""
     allowed.forEach(function(elem){
         document.getElementById(elem).style.outlineStyle = "none";
         document.getElementById(elem).style.opacity = "1";
@@ -145,13 +180,33 @@ function selectClothing(clothing){
     var allowed = ["hat", "glasses", "earrings", "scarf", "hoody", "gloves", "tshirt", "jeans", "shorts", "shoes"]
     if(allowed.includes(clothing)){
         document.getElementById("products").innerHTML = ""
+        //Inject Dropdown
+        document.getElementById("dropdown_container").innerHTML = `<div class="dropdown">
+        <button class="dropbtn">Size</button>
+        <div class="dropdown-content">
+          <a onclick= "filterClothing('`+clothing+`',this)">L</a>
+          <a onclick= "filterClothing('`+clothing+`',this)">M</a>
+          <a onclick= "filterClothing('`+clothing+`',this)">S</a>
+        </div>
+      </div>`
+      document.getElementById("dropdown_container").innerHTML += `<div class="dropdown">
+        <button class="dropbtn">Color</button>
+        <div class="dropdown-content">
+          <a onclick= "filterClothing('`+clothing+`',this)">red</a>
+          <a onclick= "filterClothing('`+clothing+`',this)">blue</a>
+          <a onclick= "filterClothing('`+clothing+`',this)">black</a>
+          <a onclick= "filterClothing('`+clothing+`',this)">white</a>
+          <a onclick= "filterClothing('`+clothing+`',this)">green</a>
+          <a onclick= "filterClothing('`+clothing+`',this)">yellow</a>
+        </div>
+      </div>`
         //inject
         clothes[clothing].forEach(function(elem){
                 document.getElementById("products").innerHTML += `
-                <div class="productContainer">
-                 <img class="clothes" src="${elem.image}" alt="${clothing}">
+                <div class="productContainer"  onClick="showPopup('${elem.price}', '${elem.image}', '${elem.name}', '${elem.description}', '${elem.color}','${elem.size}')">
+                 <img class="clothes" src="${elem.image}" alt="${elem.name}">
                  <div style="display: flex; justify-content: space-between; background-color: lightgrey">
-                    <p style="text-allign : left;text-transform: capitalize;font-weight: bold;">	&nbsp;	&nbsp;${clothing}</p>
+                    <p style="text-allign : left;text-transform: capitalize;font-weight: bold;">	&nbsp;	&nbsp;${elem.name}</p>
                     <p style="text-allign : right;font-style: oblique;">${elem.price}$	&nbsp;</p>
                 </div>
                 </div>`
@@ -160,5 +215,40 @@ function selectClothing(clothing){
     }
 }
 
+function filterClothing(clothing, input){
+    let set = false
+    document.getElementById("products").innerHTML = ""
+    clothes[clothing].forEach(function(elem){
+        if(elem.size.includes(input.innerHTML) || elem.color.includes(input.innerHTML)){
+            set = true
+            document.getElementById("products").innerHTML += `
+        <div class="productContainer" onClick="showPopup('${elem.price}', '${elem.image}', '${elem.name}', '${elem.description}', '${elem.color}','${elem.size}')">
+         <img class="clothes" src="${elem.image}" alt="${elem.name}">
+         <div style="display: flex; justify-content: space-between; background-color: lightgrey">
+            <p style="text-allign : left;text-transform: capitalize;font-weight: bold;">	&nbsp;	&nbsp;${elem.name}</p>
+            <p style="text-allign : right;font-style: oblique;">${elem.price}$	&nbsp;</p>
+        </div>
+        </div>`
+        }
+    })
+    if(!set){
+        document.getElementById("products").innerHTML = '<p style="font-size: larger; font-weight: bold;">No Resuls for these filters</p>'
+    }
+}
+function showPopup(price, image, name, info, color, size) {
+    console.log(image); 
+    console.log(price);
+    var popup = document.getElementById("popup");
+    popup.classList.add("show-popup"); 
+    document.getElementById("popupText").innerHTML = info;
+    document.getElementById("popupColor").innerHTML = "Colors: " +color;
+    document.getElementById("popupSize").innerHTML = "Sizes: " +size;
+    document.getElementById("popupPrice").innerHTML = "Unbeatable  " + price + "$";
+    document.getElementById("popupImage").src=image; 
+    document.getElementById("popupTitle").innerHTML = name;
+}
 
-
+function closePopup() {
+    var popup = document.getElementById("popup");
+    popup.classList.remove("show-popup"); 
+}
